@@ -1,3 +1,4 @@
+import styles from '../styles/ListaProdutos.module.css'
 import { useEffect, useState } from "react";
 import ListaProdutos from "./ListaProdutos";
 
@@ -20,7 +21,7 @@ const [lista, setLista] = useState([]);
 
     return (
         <>
-        <h1>Lista de Produtos</h1>
-        <ListaProdutos lista={produtos}/>
+        <h1 className={styles.blocoLista}>Lista de Produtos</h1>
+        <ListaProdutos lista={lista}/>
         </>
     );}
