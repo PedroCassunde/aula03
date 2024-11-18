@@ -1,4 +1,4 @@
-import styles from '../styles/ListaProdutos.module.css'
+import styles from '../styles/listaProdutos.module.css'
 import { useEffect, useState } from "react";
 import ListaProdutos from "./ListaProdutos";
 
