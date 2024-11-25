@@ -19,9 +19,20 @@ const [lista, setLista] = useState([]);
         receberListaProdutos();
     }, []);
 
+    if (lista.legth === 0) {
+        return <h1>Carregando...</h1>
+    }
+
+    const orderAZ = () =>{
+        const listaAux = [...lista].sort((a, b)=> a.title.localeCompare(b.title));
+        setLista(listaAux);
+    }
+
     return (
         <>
+        <header></header>
         <h1 className={styles.blocoLista}>Lista de Produtos</h1>
+        <button onClick={()=> orderAZ()}>AZ</button>
         <ListaProdutos lista={lista}/>
         </>
     );}
